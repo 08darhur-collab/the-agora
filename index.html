@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Agora — a twelve-axis political test</title>
+<meta name="description" content="A twelve-axis political test. Answer 84 statements, or 48 in the quick test, drawn from a bank of over 800, and see where you stand among ideologies, famous people, countries, regions and historical regimes.">
+<!-- Link previews (Discord, Messenger, X, iMessage…). Once the site is online, put its full address in
+     SITE below, e.g. https://yourname.github.io/the-agora/ — preview images only work with a full address. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Agora">
+<meta property="og:title" content="The Agora — a twelve-axis political test">
+<meta property="og:description" content="Where do you stand among 280 ideologies and nearly 1,000 people? 84 statements across twelve axes, or 48 in the adaptive quick test.">
+<meta property="og:image" content="SITE/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Agora: a twelve-axis political test">
+<meta property="og:url" content="SITE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Agora — a twelve-axis political test">
+<meta name="twitter:description" content="Where do you stand among 280 ideologies and nearly 1,000 people?">
+<meta name="twitter:image" content="SITE/og-image.png">
+<meta name="theme-color" content="#121211">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='1' y='8' width='5' height='14' rx='1.5' fill='%23e85433'/%3E%3Crect x='7' y='3' width='5' height='19' rx='1.5' fill='%236a83f0'/%3E%3Crect x='13' y='11' width='5' height='11' rx='1.5' fill='%231fa06e'/%3E%3Crect x='19' y='6' width='4' height='16' rx='1.5' fill='%23c964b8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* If a file has a typing mistake after an edit (a missing comma, quote or bracket), say which file and line
+   instead of showing an empty page. */
+window.addEventListener('error', function (e) {
+  if (window.agoraFailed || !(e instanceof ErrorEvent)) return;
+  var f = String(e.filename || '').split('/').pop().split('?')[0], known = /^(data|data-more|script|share)\.js$/.test(f);
+  if (f && !known) return;
+  if (!f) {   // a page opened straight from a folder hides the details, so work out which file did not run
+    f = typeof QUESTIONS === 'undefined' ? 'data.js' : typeof Engine === 'undefined' ? 'script.js' : typeof PEOPLE !== 'undefined' && !PEOPLE.length ? 'data-more.js' : '';
+    if (!f) return;
+  }
+  window.agoraFailed = true;
+  var esc = function (t) { return String(t).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); };
+  var box = document.createElement('div');
+  box.setAttribute('role', 'alert');
+  box.style.cssText = 'position:fixed;left:16px;right:16px;top:16px;z-index:999;max-width:720px;margin:0 auto;padding:18px 20px;background:#fff;color:#121212;border:2px solid #9e2a25;border-radius:8px;font:16px/1.5 system-ui,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.25)';
+  box.innerHTML = '<b>The Agora could not load all of its files.</b><br>There is a mistake in <code>' + esc(f) + '</code>' +
+    (known && e.lineno ? ' at line ' + e.lineno + (e.colno ? ', column ' + e.colno : '') + ':<br><code>' + esc(e.message || '') + '</code>'
+      : '. Press F12 and open the Console tab to see the exact line.') +
+    (/^data/.test(f) ? '<br>This is usually a missing comma, quote or bracket in the entry on that line or the one just above it.' : '');
+  (document.body || document.documentElement).appendChild(box);
+}, true);
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="mast">
+  <div class="mast-in">
+    <a class="brand" href="#/" aria-label="The Agora, home">
+      <svg class="logo" viewBox="0 0 46 24" aria-hidden="true">
+        <rect class="g-power" x="0" y="4" width="3" height="8"/><rect class="g-power" x="4" y="12" width="3" height="6"/><rect class="g-power" x="8" y="7" width="3" height="5"/>
+        <rect class="g-world" x="12" y="12" width="3" height="9"/><rect class="g-world" x="16" y="9" width="3" height="3"/><rect class="g-world" x="20" y="12" width="3" height="5"/>
+        <rect class="g-economy" x="24" y="3" width="3" height="9"/><rect class="g-economy" x="28" y="12" width="3" height="7"/><rect class="g-economy" x="32" y="6" width="3" height="6"/>
+        <rect class="g-culture" x="36" y="12" width="3" height="4"/><rect class="g-culture" x="40" y="5" width="3" height="7"/><rect class="g-culture" x="44" y="12" width="2" height="8"/>
+      </svg>
+      <span>The Agora</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#/test" data-nav="test">Test</a>
+      <a href="#/ideologies" data-nav="ideologies">Ideologies</a>
+      <a href="#/people" data-nav="people">People</a>
+      <a href="#/countries" data-nav="countries">Countries</a>
+      <a href="#/library" data-nav="library">Library</a>
+      <a href="#/axes" data-nav="axes">Axes</a>
+      <a href="#/method" data-nav="method">Method</a>
+    </nav>
+    <button class="find" type="button" data-act="find" aria-label="Search all ideologies, people and countries (press /)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    <button class="theme" type="button" data-act="theme" aria-label="Switch theme"><span aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<main id="main"><div id="view"></div></main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p><b>The Agora</b> · a twelve-axis political test. Every placement is a judgement explained on the <a href="#/method">method page</a>; countries and regions are described as of October 2026.</p>
+    <p>Flags from flagcdn.com and Wikipedia; portraits from Wikipedia under their original licences. Your answers never leave your browser.</p>
+  </div>
+</footer>
+
+<dialog id="axhelp" aria-label="About this axis">
+  <div class="dlg-body"></div>
+  <button class="dlg-x" type="button" data-close aria-label="Close">✕</button>
+</dialog>
+
+<dialog id="finder" aria-label="Search everything">
+  <div class="dlg-body"></div>
+  <button class="dlg-x" type="button" data-close aria-label="Close">✕</button>
+</dialog>
+
+<dialog id="qabout" aria-labelledby="qa-h">
+  <div class="dlg-body"></div>
+  <button class="dlg-x" type="button" data-close aria-label="Close">✕</button>
+</dialog>
+
+<script src="data.js"></script>
+<script src="share.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
